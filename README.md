@@ -25,7 +25,7 @@ You will see two additional buttons on the left sidebar as shown below.
 - **Fix Images** - This button will attempt to fix the inversion caused in the images as well. [Shortcut Keybind: `Shift + Alt + F`]
 
 
-# KeyConVS
+# KeyConVP
 
 Pausing/Seeking requires user to use mouse by clicking the buttons. This allows you to control the video player using keyboard.
 
