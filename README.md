@@ -46,6 +46,8 @@ Pausing/Seeking requires user to use mouse by clicking the buttons. This allows 
 - **Spacebar** - Play/Pause
 - **Left Arrow** - Seek Backward (10s)
 - **Right Arrow** - Seek Forward (10s)
+- **Up Arrow** - Increase Volume (By factor of 10)
+- **Down Arrow** - Decrease Volume (By factor of 10)
 
 **Note:** Do not click on seek buttons (using mouse) after entering the code, else the spacebar keyboard control will not work properly (problem with the video player itself, and I can't do anything about it), though if you have clicked it, just click on play/pause button (using mouse) once and it will get fixed :)
 
