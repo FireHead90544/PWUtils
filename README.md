@@ -43,9 +43,9 @@ Pausing/Seeking requires user to use mouse by clicking the buttons. This allows 
 **Note:** You need to do this everytime you open the website, i.e "refresh" the page or open the website in another tab, so better save this somewhere from where you can access it quickly. Though, you won't need to repeat the steps until you don't refresh the page. 
 
 ### Usage
-Spacebar - Play/Pause
-Left Arrow - Seek Backward (10s)
-Right Arrow - Seek Forward (10s)
+- **Spacebar** - Play/Pause
+- **Left Arrow** - Seek Backward (10s)
+- **Right Arrow** - Seek Forward (10s)
 
 **Note:** Do not click on seek buttons (using mouse) after entering the code, else the spacebar keyboard control will not work properly (problem with the video player itself, and I can't do anything about it), though if you have clicked it, just click on play/pause button (using mouse) once and it will get fixed :)
 
