@@ -52,6 +52,12 @@ Pausing/Seeking requires user to use mouse by clicking the buttons. This allows 
 **Note:** Do not click on seek buttons (using mouse) after entering the code, else the spacebar keyboard control will not work properly (problem with the video player itself, and I can't do anything about it), though if you have clicked it, just click on play/pause button (using mouse) once and it will get fixed :)
 
 
+# DiscordRPC
+A rich presence client for pw to work with discord client.
+
+Yet to be purrfected, will upload when done :)
+
+
 # Downloader
 A generic video downloader for PW [Coming Soon] (Probably after my exams lol)
 ## Contributing
