@@ -1,4 +1,4 @@
-// PW Dark Mode
+// PW KeyConVP
 // Keyboard Controls for Video Player
 // Tested against 'https://study.physicswallah.live/'
 // Coded by: GitHub/FireHead90544 (Rudransh Joshi)
