@@ -38,6 +38,8 @@ Pausing/Seeking requires user to use mouse by clicking the buttons. This allows 
 - Head over to the `Console` tab.
 - Paste the code you copied earlier and press enter.
 - Done :D
+
+
 **Note:** You need to do this everytime you open the website, i.e "refresh" the page or open the website in another tab, so better save this somewhere from where you can access it quickly. Though, you won't need to repeat the steps until you don't refresh the page. 
 
 ### Usage
