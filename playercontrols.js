@@ -11,6 +11,8 @@
 // Spacebar - Play/Pause
 // Left Arrow - Seek Backward 10s
 // Right Arrow - Seek Forward 10s
+// Up Arrow - Increase Volume (By Factor of 10)
+// Down Arrow - Decrease Volume (By Factor of 10)
 
 document.onkeyup = function(e) {
     var evt = window.event || e;
@@ -24,9 +26,19 @@ document.onkeyup = function(e) {
         pause = document.querySelector('.vjs-play-control.vjs-control.vjs-button.vjs-paused');
         play = document.querySelector('.vjs-play-control.vjs-control.vjs-button.vjs-playing');
         if (pause) {
-            pause.click()
+            pause.click();
         } else if (play) {
-            play.click()
+            play.click();
         }
+    } else if (evt.keyCode == 38) {
+        // Up arrow key - Increase Volume
+        v = document.querySelector('video').volume + 0.1;
+        if (v >= 1){}
+        else { document.querySelector('video').volume = v; }
+    } else if (evt.keyCode == 40) {
+        // Down arrow key - Decrese Volume
+        v = document.querySelector('video').volume - 0.1;
+        if (v <= 0){}
+        else { document.querySelector('video').volume = v; }
     }
 }
