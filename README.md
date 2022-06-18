@@ -3,6 +3,17 @@
 Some of the utilities I made to facilitate me while using PhysicsWallah's website.
 <img src="https://user-images.githubusercontent.com/55452780/173436175-f99671ac-cc21-48b1-aa0a-eb54c2b57d2d.png" align="right" title="All the image rights goes to their respective owners PW, the logo's just been modified by me by adding a few more illustrations to it.">
 
+<hr>
+
+# Documentation
+- [Dark Mode](#dark-mode)
+- [KeyConVP](#keyconvp)
+- [PWRpc](#pwrpc)
+- [Downloader](#downloader)
+
+<hr>
+
+
 # Dark Mode
 
 Since there is no dark mode released officially yet, here is the custom one I made, to be honest, it just works :)
@@ -24,6 +35,7 @@ You will see two additional buttons on the left sidebar as shown below.
 - **Change Theme** - This button will allow you to change theme from light to dark and vice versa. [Shortcut Keybind: `Shift + Alt + D`]
 - **Fix Images** - This button will attempt to fix the inversion caused in the images as well. [Shortcut Keybind: `Shift + Alt + F`]
 
+<hr>
 
 # KeyConVP
 
@@ -51,15 +63,33 @@ Pausing/Seeking requires user to use mouse by clicking the buttons. This allows 
 
 **Note:** Do not click on seek buttons (using mouse) after entering the code, else the spacebar keyboard control will not work properly (problem with the video player itself, and I can't do anything about it), though if you have clicked it, just click on play/pause button (using mouse) once and it will get fixed :)
 
+<hr>
 
-# DiscordRPC
-A rich presence client for pw to work with discord client.
+# PWRpc
+Manually Operated Rich Presence Client for Discord
 
-Yet to be purrfected, will upload when done :)
+### Installation & Usage
+- Install [https://python.org/downloads/](Python) on your system (tested against v3.8)
+- Install requirement by using `pip install pypresence` (though I've made a check for it, if you forget)
+- Open [PWRpc.py](https://raw.githubusercontent.com/FireHead90544/PWUtils/main/pwrpc.py) and download it, or copy it's content and create a file named `pwrpc.py` and paste all of the copied content to it. (In short, replicate the file in your system)
+- From the directory where the file is present, open terminal and run `python pwrpc.py`
+- Follow the inputs as asked in the screen, and done :)
+- Open the terminal and press `Ctrl + C` or close the terminal itself to exit the program.
 
+![image](https://user-images.githubusercontent.com/55452780/174445984-4a0b5e87-418a-4800-b3ce-7fc533ba2640.png)
+
+![image](https://user-images.githubusercontent.com/55452780/174446044-877ea83b-7828-4584-b05f-d59d88757f38.png)
+
+**Note:** Please follow the instructions exactly as asked else the program might crash due to invalid inputs since I haven't enabled checks/validations (since I technically made it for myself), if you face any problem, reach me on discord: </Rudransh Joshi>#2022 || If you are a developer and want to use your own client ID, check the python file itself, I've described in comments what to do exactly :)
+
+<hr>
 
 # Downloader
 A generic video downloader for PW [Coming Soon] (Probably after my exams lol)
+
+<hr>
+
+
 ## Contributing
 
 This project is open source, you are free to modify the code to whatever extent you like just be sure to credit the original author/repository.
