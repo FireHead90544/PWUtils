@@ -69,7 +69,7 @@ Pausing/Seeking requires user to use mouse by clicking the buttons. This allows 
 Manually Operated Rich Presence Client for Discord
 
 ### Installation & Usage
-- Install [https://python.org/downloads/](Python) on your system (tested against v3.8)
+- Install [Python](https://python.org/downloads/) on your system (tested against v3.8)
 - Install requirement by using `pip install pypresence` (though I've made a check for it, if you forget)
 - Open [PWRpc.py](https://raw.githubusercontent.com/FireHead90544/PWUtils/main/pwrpc.py) and download it, or copy it's content and create a file named `pwrpc.py` and paste all of the copied content to it. (In short, replicate the file in your system)
 - From the directory where the file is present, open terminal and run `python pwrpc.py`
