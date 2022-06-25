@@ -36,7 +36,7 @@ fetch('https://raw.githubusercontent.com/FireHead90544/PWUtils/main/darkmode.js'
 ### Usage
 You will see two additional buttons on the left sidebar as shown below.
 
-![image](https://user-images.githubusercontent.com/55452780/173432663-6838aba7-2642-4859-966e-718f4bb09c12.png)
+![image](https://user-images.githubusercontent.com/55452780/175779388-8f1d8944-36bb-43e5-b0e3-b3298fcb8066.png)
 
 - **Change Theme** - This button will allow you to change theme from light to dark and vice versa. [Shortcut Keybind: `Shift + Alt + D`]
 - **Fix Images** - This button will attempt to fix the inversion caused in the images as well. [Shortcut Keybind: `Shift + Alt + F`]
