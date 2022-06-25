@@ -21,12 +21,14 @@ function change_theme(){
       document.getElementsByTagName('html')[0].style.filter = 'invert(0) hue-rotate(0deg)'
       light = true   
    }
+   fix_containers();
 }
 // This logic handles the fixing of images and videos becoming inverted
 function fix_containers() {
     if (!fixed){
         var imgs = document.getElementsByTagName("img");
         var vids = document.getElementsByTagName("video");
+        var pwlogo = document.getElementsByClassName('mouse_pointer')[0]
         for (var i = 0; i < imgs.length; i++) {
            if (imgs[i].style.filter === ""){
                imgs[i].style.filter = "invert(1) hue-rotate(180deg)";
@@ -41,6 +43,7 @@ function fix_containers() {
                vids[i].style.filter = "";
            }
         }
+        if (pwlogo.style.filter === ""){pwlogo.style.filter="invert(0) hue-rotate(180deg)";}else{pwlogo.style.filter="";}
         fixed = true
     }
     else{
