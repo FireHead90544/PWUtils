@@ -40,6 +40,7 @@ You will see two additional buttons on the left sidebar as shown below.
 
 - **Change Theme** - This button will allow you to change theme from light to dark and vice versa. [Shortcut Keybind: `Shift + Alt + D`]
 - **Fix Images** - This button will attempt to fix the inversion caused in the images as well. [Shortcut Keybind: `Shift + Alt + F`]
+^^^ If any image get's inverted during the change of theme or something you can just use the `Fix Images` button or the `Shift + Alt + F` keybind to fix them.
 
 <hr>
 
