@@ -29,7 +29,7 @@ function fix_containers() {
         var vids = document.getElementsByTagName("video");
         for (var i = 0; i < imgs.length; i++) {
            if (imgs[i].style.filter === ""){
-               imgs[i].style.filter = "invert(1) hue-rotate(0deg)";
+               imgs[i].style.filter = "invert(1) hue-rotate(180deg)";
            }else{
                imgs[i].style.filter = "";
            }
