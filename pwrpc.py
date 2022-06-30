@@ -52,7 +52,7 @@ else:
     print("\nEnter how many hours/minutes will you study for.")
     end = start + int(input("Hours: ")) * 3600 + int(input("Minutes: ")) * 60
 
-print("\nAvailable keys to use: 'pw', 'physics', 'chemistry', 'mathematics', 'biology' <-- Only valid values of inputs for Logo, Subject\n")
+print("\nAvailable keys to use: 'pw', 'physics', 'chemistry', 'mathematics', 'biology', 'test' <-- Only valid values of inputs for Logo, Subject\n")
 image = input("\nLogo (Large Image): ").lower() or "pw"
 text = str(input("\nText (Text which will be shown upon hovering the Large Image): ") or "Physics Wallah!") + base64.b64decode(b'IHx8IERldmVsb3BlZCBCeTogPC9SdWRyYW5zaCBKb3NoaT4jMjAyMg==').decode("utf-8")
 subject = input("\nSubject (Small Image): ")
