@@ -52,21 +52,22 @@ function fix_containers() {
 }
 
 // This crap creates buttons in left sidebar for technically blind people who cannot press keys (just kidding) xD
-var themeBtn = document.createElement("button");
-var fixBtn = document.createElement("button");
-var someDiv = document.createElement("div")
-themeBtn.innerHTML = "Change Theme";
-fixBtn.innerHTML = "Fix Images";
-themeBtn.classList.add("button-native")
-fixBtn.classList.add("button-native")
-themeBtn.style.cssText = "background-color: #5a4bda!important; color: #fff!important; flex: 1; margin: 0 4px; border: 1px solid #e6e6e6; border-radius: 25px; padding: 8px 16px; font-size: 14px; font-weight: 700; cursor: pointer; visibility: inherit; white-space: nowrap; text-align: center"
-fixBtn.style.cssText = "background-color: #5a4bda!important; color: #fff!important; flex: 1; margin: 0 4px; border: 1px solid #e6e6e6; border-radius: 25px; padding: 8px 16px; font-size: 14px; font-weight: 700; cursor: pointer; visibility: inherit; white-space: nowrap; text-align: center"
-var body = document.getElementsByTagName("ion-header")[0];
-someDiv.appendChild(themeBtn);
-someDiv.appendChild(fixBtn)
-body.appendChild(someDiv);
-themeBtn.addEventListener("click", change_theme);
-fixBtn.addEventListener("click", fix_containers)
+// Since the website is updated now, these buttons won't work, use keybinds instead, I'll fix them at some point later on
+// var themeBtn = document.createElement("button");
+// var fixBtn = document.createElement("button");
+// var someDiv = document.createElement("div")
+// themeBtn.innerHTML = "Change Theme";
+// fixBtn.innerHTML = "Fix Images";
+// themeBtn.classList.add("button-native")
+// fixBtn.classList.add("button-native")
+// themeBtn.style.cssText = "background-color: #5a4bda!important; color: #fff!important; flex: 1; margin: 0 4px; border: 1px solid #e6e6e6; border-radius: 25px; padding: 8px 16px; font-size: 14px; font-weight: 700; cursor: pointer; visibility: inherit; white-space: nowrap; text-align: center"
+// fixBtn.style.cssText = "background-color: #5a4bda!important; color: #fff!important; flex: 1; margin: 0 4px; border: 1px solid #e6e6e6; border-radius: 25px; padding: 8px 16px; font-size: 14px; font-weight: 700; cursor: pointer; visibility: inherit; white-space: nowrap; text-align: center"
+// var body = document.getElementsByTagName("ion-header")[0];
+// someDiv.appendChild(themeBtn);
+// someDiv.appendChild(fixBtn)
+// body.appendChild(someDiv);
+// themeBtn.addEventListener("click", change_theme);
+// fixBtn.addEventListener("click", fix_containers)
 
 // Shift + Alt + D --> Dark Mode
 // Shift + Alt + F --> Fix Images/Videos
