@@ -38,6 +38,7 @@ You will see two additional buttons on the left sidebar as shown below.
 
 ![image](https://user-images.githubusercontent.com/55452780/175779388-8f1d8944-36bb-43e5-b0e3-b3298fcb8066.png)
 
+Since the website's been updated, the below button won't work, use keybinds instead. I'll update these later at some point.
 - **Change Theme** - This button will allow you to change theme from light to dark and vice versa. [Shortcut Keybind: `Shift + Alt + D`]
 - **Fix Images** - This button will attempt to fix the inversion caused in the images as well. [Shortcut Keybind: `Shift + Alt + F`]
 
