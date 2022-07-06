@@ -1,89 +1,104 @@
-# PWRpc - Manually Operated Rich Presence Client for Discord
-# Developed By </Rudransh Joshi>
-# Haven't took care of checks/validations for url, and a bit hardcoded (because I technically made it for myself)
-# Since some non-tech people are also gonna use it, wrong inputs will cause the program to crash, so better not play with it.
-# Follow the instructions as shown xD
-# Contributions are welcome, please always provide the source if someone asks for, thank you :)
-
+import os
 import time
-import base64
 try:
-    from pypresence import Presence
+    from pypresence import Presence  # pip install pypresence
+    from InquirerPy import prompt # pip install InquirerPy
+    from colorama import init, Fore # pip install colorama
 except ImportError:
-    import os
-    os.system('pip install pypresence')
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("pip install pypresence InquirerPy colorama")
 
+init(autoreset=True)
 
-print("""
-  _______          _______             
- |  __ \ \        / /  __ \            
- | |__) \ \  /\  / /| |__) |_ __   ___ 
- |  ___/ \ \/  \/ / |  _  /| '_ \ / __|
- | |      \  /\  /  | | \ \| |_) | (__ 
- |_|       \/  \/   |_|  \_\ .__/ \___|
-                           | |         
-                           |_|     
+clsr = lambda: os.system('cls' if os.name == 'nt' else 'clear')
+clsr()
 
-    Developer: </Rudransh Joshi>
-""")
+CLIENT_ID = "987287937467170846"
 
+def pp():
+    clsr()
+    print(f"""
+    {Fore.RED}  _______          _______             
+    {Fore.RED} |  __ \ \        / /  __ \            
+    {Fore.YELLOW} | |__) \ \  /\  / /| |__) |_ __   ___ 
+    {Fore.YELLOW} |  ___/ \ \/  \/ / |  _  /| '_ \ / __|
+    {Fore.GREEN} | |      \  /\  /  | | \ \| |_) | (__ 
+    {Fore.GREEN} |_|       \/  \/   |_|  \_\ .__/ \___|
+    {Fore.GREEN}                           | |         
+    {Fore.GREEN}                           |_|     
 
-CLIENT_ID = "987287937467170846" # <-- Your CLIENT_ID "Go to developer portal, create your application, go to oauth2 tab and grab it"
+    {Fore.WHITE}----------------------------------------
+        {Fore.RED}Developer: {Fore.BLUE}FireHead90544
+        {Fore.RED}Discord: {Fore.BLUE}</Rudransh Joshi>#2022
+        {Fore.RED}Client ID: {Fore.BLUE}{CLIENT_ID}
+        {Fore.RED}Version: {Fore.BLUE}1.0.2
+    {Fore.WHITE}----------------------------------------
 
-# You also need to go to the rich presence tab and upload your assets and use their names as keys in the application
-# Otherwise just let my client_id handle everything :)
+    """)
+pp()
 
-# Not so highly intellectual stuffs
-# but your pathetic brain might not
-# be able to handle it, so probably
-# just go with the flow :)
+stylesheet = {
+    "questionmark": "#16C60C bold",
+    "question": "#E74856 bold",
+    "pointer": "#3A96DD",
+    "answer": "#E5E512"
+}
 
-state = input("\n\nState: ")
-details = input("\nBatch: ")
-t = int(input("\nTime Type [1. Definite, 2. Indefinite]: "))
-if t == 2:
-    start = time.time()
-    print("\nEnter 0 in both inputs if you just started studying.\nOr enter how many hours/minutes before you started studying.")
-    start = start - int(input("Hours: ")) * 3600 - int(input("Minutes: ")) * 60
-    end = None
-else:
-    start = time.time()
-    print("\nEnter how many hours/minutes will you study for.")
-    end = start + int(input("Hours: ")) * 3600 + int(input("Minutes: ")) * 60
+LOG_TIME = time.time()
 
-print("\nAvailable keys to use: 'pw', 'physics', 'chemistry', 'mathematics', 'biology', 'test' <-- Only valid values of inputs for Logo, Subject\n")
-image = input("\nLogo (Large Image): ").lower() or "pw"
-text = str(input("\nText (Text which will be shown upon hovering the Large Image): ") or "Physics Wallah!") + base64.b64decode(b'IHx8IERldmVsb3BlZCBCeTogPC9SdWRyYW5zaCBKb3NoaT4jMjAyMg==').decode("utf-8")
-subject = input("\nSubject (Small Image): ")
-
-print("\nButtons [Leave all inputs empty for no buttons]: ")
-
-buttons = []
-for i in range(2):
-    lbl = input(f"\nEnter Button #{i+1}'s Text: ")
-    url = input(f"Enter Button #{i+1}'s URL: ")
-    if lbl and url:
-        buttons.append({"label": lbl, "url": url})
-if not buttons:
-    buttons = None
-
+def rpcData():
+    pp()
+    dataIn = [
+        {
+            "type": "input",
+            "name": "batch",
+            "message": "Which batch are you studying from: ",
+            "validate": lambda res: len(res) > 0,
+            "invalid_message": "Input Cannot be empty."
+        },
+        {
+            "type": "list",
+            "name": "subject",
+            "message": "Select the subject you are studying: ",
+            "choices": ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'Attempting Test']
+        },
+        {
+            "type": "input",
+            "name": "topic",
+            "message": "What chapter/topic are you studying: ",
+            "validate": lambda res: len(res) > 0,
+            "invalid_message": "Input Cannot be empty."
+        }
+    ]
+    data = prompt(dataIn, style=stylesheet)
+    return data['batch'], "test" if data['subject'].startswith("At") else data['subject'].lower(), data['topic']
 
 RPC = Presence(CLIENT_ID)
 RPC.connect()
 
-RPC.update(
-    state=state, 
-    details=details, 
-    start= start, 
-    end=end, 
-    large_image=image, 
-    large_text=text, 
-    small_image=subject.lower(), 
-    small_text=subject.capitalize(), 
-    buttons=buttons)
-
+def update_presence():
+    data = rpcData()
+    RPC.update(
+        state=data[2].title(),
+        details=data[0].title(),
+        start=LOG_TIME,
+        large_image=data[1],
+        large_text="Attempting Test" if data[1] == "test" else data[1].title(),
+        small_image="pw",
+        small_text="Physics Wallah!",
+        buttons=[{"label": "Physics Wallah 💖", "url": "https://discord.gg/physicswallah"}, { "label": "PW Utils ⭐", "url": "https://github.com/FireHead90544/PWUtils"}]
+    )
+    print(f"{Fore.GREEN} >>> Updated Rich Presence :)")
+    print(f"{Fore.CYAN} >>> Now just leave this window open (maybe just minimize it), you can update/close whenever you want by selecting the below options.")
 
 while True:
-    print("RPC Updated!")
-    time.sleep(3600)
+    print("\n")
+    data = prompt({"type": "list", "name": "dat", "message": "What do you want to do?", "choices": ["Update RPC", "Stop & Close"]}, style=stylesheet)
+    if data['dat'] == "Update RPC":
+        update_presence()
+    else:
+        try:
+            RPC.close()
+        except Exception:
+            pass
+        print(f"{Fore.GREEN} >>> Closed Rich Presence :)")
+        break
