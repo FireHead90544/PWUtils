@@ -83,20 +83,20 @@ Manually Operated Rich Presence Client for Discord
 
 ### Installation & Usage
 - Install [Python](https://python.org/downloads/) on your system (tested against v3.8)
-- Install requirement by using `pip install pypresence` (though I've made a check for it, if you forget)
 - Open [PWRpc.py](https://raw.githubusercontent.com/FireHead90544/PWUtils/main/pwrpc.py) and download it, or copy it's content and create a file named `pwrpc.py` and paste all of the copied content to it. (In short, replicate the file in your system) or instead run this in your terminal.
 ```py
 curl -o pwrpc.py https://raw.githubusercontent.com/FireHead90544/PWUtils/main/pwrpc.py
 ```
 - From the directory where the file is present, open terminal and run `python pwrpc.py`
 - Follow the inputs as asked in the screen, and done :)
-- Open the terminal and press `Ctrl + C` or close the terminal itself to exit the program.
 
-![image](https://user-images.githubusercontent.com/55452780/174445984-4a0b5e87-418a-4800-b3ce-7fc533ba2640.png)
+![image](https://user-images.githubusercontent.com/55452780/177556548-ed6d231f-b330-4f75-a66c-6e659519ce68.png)
+![image](https://user-images.githubusercontent.com/55452780/177556560-020af1ce-cccd-4fe3-8b40-d2130cbadf7a.png)
+![image](https://user-images.githubusercontent.com/55452780/177556568-03548019-b29a-46c1-b99a-b427d7155729.png)
+![image](https://user-images.githubusercontent.com/55452780/177556683-47e7ab1a-7e2b-4962-b9a4-b486bd6b6908.png)
 
-![image](https://user-images.githubusercontent.com/55452780/174446044-877ea83b-7828-4584-b05f-d59d88757f38.png)
 
-**Note:** Please follow the instructions exactly as asked else the program might crash due to invalid inputs since I haven't enabled checks/validations (since I technically made it for myself), if you face any problem, reach me on discord: </Rudransh Joshi>#2022 || If you are a developer and want to use your own client ID, check the python file itself, I've described in comments what to do exactly :)
+**Note:** This is the updated and much better version of the last one I made, this one's UI is formatted very nicely, took a lot time ngl. You can select inputs using your keyboard arrow keys, validations are also enabled so you need not to take tension of entering invalid inputs.
 
 <hr>
 
