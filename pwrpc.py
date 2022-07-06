@@ -6,6 +6,9 @@ try:
     from colorama import init, Fore # pip install colorama
 except ImportError:
     os.system("pip install pypresence InquirerPy colorama")
+    from pypresence import Presence
+    from InquirerPy import prompt
+    from colorama import init, Fore
 
 init(autoreset=True)
 
