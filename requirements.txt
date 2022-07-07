@@ -1,3 +1,4 @@
 pypresence
 InquirerPy
 colorama
+pyinstaller
