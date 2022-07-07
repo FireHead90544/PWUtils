@@ -82,13 +82,31 @@ fetch('https://raw.githubusercontent.com/FireHead90544/PWUtils/main/playercontro
 Manually Operated Rich Presence Client for Discord
 
 ### Installation & Usage
+Since many of you are non-techy people and were having hard time downloading and using it, I wrote a github action to build the application and create a release. You just need to download it and double click the executable file to run.
+
+- Go to the [Releases Tab](https://github.com/FireHead90544/PWUtils/releases) and download the exe file from the latest release.
+
+![image](https://user-images.githubusercontent.com/55452780/177721044-64e2edb0-a5ad-4e5c-8cc8-ae3dd5c1fe13.png)
+
+- Double click the downloaded executable. Done :)
+
+**Please note that Windows defender or any other antivirus might flag the executable as a false-positive. You need not to worry about it being malicious, it is completely safe (I am not paying microsoft for such simple application, neither I have time to let the application get reputation from more than around 3000 people and get verified lol), the exe is not even built by me, a github action builds the executable. Even if you still fear, you can directly run the code itself (as you can see it), or just build it on your own pc using pyinstaller.**
+<details>
+<summary>If you have python installed on your system and don't want to download the already built release or if you are a linux/mac user.</summary>
+
 - Install [Python](https://python.org/downloads/) on your system (tested against v3.8)
+
 - Open [PWRpc.py](https://raw.githubusercontent.com/FireHead90544/PWUtils/main/pwrpc.py) and download it, or copy it's content and create a file named `pwrpc.py` and paste all of the copied content to it. (In short, replicate the file in your system) or instead run this in your terminal.
+
 ```py
 curl -o pwrpc.py https://raw.githubusercontent.com/FireHead90544/PWUtils/main/pwrpc.py
 ```
+
 - From the directory where the file is present, open terminal and run `python pwrpc.py`
+
 - Follow the inputs as asked in the screen, and done :)
+
+</details>
 
 ![image](https://user-images.githubusercontent.com/55452780/177556548-ed6d231f-b330-4f75-a66c-6e659519ce68.png)
 ![image](https://user-images.githubusercontent.com/55452780/177556560-020af1ce-cccd-4fe3-8b40-d2130cbadf7a.png)
