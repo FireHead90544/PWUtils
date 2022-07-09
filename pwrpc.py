@@ -80,6 +80,10 @@ RPC.connect()
 
 def update_presence():
     data = rpcData()
+    try:
+        RPC.clear()
+    except Exception:
+        RPC.connect() # This means that the connection already got disconnected, so attempt to start a new one
     RPC.update(
         state=data[2].title(),
         details=data[0].title(),
