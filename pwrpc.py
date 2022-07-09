@@ -33,7 +33,7 @@ def pp():
         {Fore.RED}Developer: {Fore.BLUE}FireHead90544
         {Fore.RED}Discord: {Fore.BLUE}</Rudransh Joshi>#2022
         {Fore.RED}Client ID: {Fore.BLUE}{CLIENT_ID}
-        {Fore.RED}Version: {Fore.BLUE}1.0.2
+        {Fore.RED}Version: {Fore.BLUE}1.0.3
     {Fore.WHITE}----------------------------------------
 
     """)
