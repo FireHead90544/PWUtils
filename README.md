@@ -6,13 +6,20 @@ Some of the utilities I made to facilitate me while using PhysicsWallah's websit
 <hr>
 
 # Documentation
+- [How to Open Console](#how-to-open-console)
 - [Dark Mode](#dark-mode)
+- [Don't Truck With Copy/Paste](#dont-truck-with-copy-paste)
 - [KeyConVP](#keyconvp)
 - [PWRpc](#pwrpc)
 - [Downloader](#downloader)
 
 <hr>
 
+# How to Open Console?
+The website has even disabled the shortcut `Ctrl + Shift + I` to open developer tools. How to open it then? Just open the website, click on the address/url bar, now press `Ctrl + Shift + I`. You can even open it by clicking the triple dots (generally on the top-rightmost side of your screen) --> More Tools --> Developer Tools. 
+After opening the developer tools, just head over to the console tab. You are welcome :)
+
+<hr>
 
 # Dark Mode
 
@@ -44,6 +51,18 @@ Since the website's been updated, the below button won't work, use keybinds inst
 
 ^^^ If any image get's inverted during the change of theme or something you can just use the `Fix Images` button or the `Shift + Alt + F` keybind to fix them.
 
+<hr>
+
+# Don't Truck With Copy Paste
+The website has disabled the copy/paste functionalities to prevent spams, but sometimes it becomes important to copy/paste things, this snippet allows you to just do the same. Kindly, don't use it for any spamming purposes or to abuse ths system.
+
+### Installation
+- Open console and paste the below snippet.
+```js
+fetch('https://raw.githubusercontent.com/FireHead90544/PWUtils/main/donttruckwithcopypaste.js').then(r => r.text()).then(s => new Function(s)());
+```
+
+- Boom, you can now copy and paste stuffs in/from the website.
 <hr>
 
 # KeyConVP
