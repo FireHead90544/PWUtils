@@ -140,6 +140,11 @@ curl -o pwrpc.py https://raw.githubusercontent.com/FireHead90544/PWUtils/main/pw
 # Downloader
 A generic video downloader for PW [Coming Soon] (Probably after my exams lol)
 
+**Update:** Found a few ways to download the videos but have to do a bit more research before I could implement them after my exam.
+- Downloaded the video and audio (Need to somehow get the decryption key and decrypt key) [Can use Widevine-l3-decryptor but sadgely it died, so unable to get the keys, let me know if anybody else knows how to]
+- Somehow get the link to the youtube videos (ofc implement security to downloaded subscribed batches' videos) then download them using yt-dlp/youtube-dl [Got a bit details after decompiling the mobile application and checking it's code but still most part is unrecognizable]
+ - I'll use my full brain after JEE 💀 to write something from scratch on my own.
+
 <hr>
 
 
