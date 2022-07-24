@@ -105,7 +105,7 @@ def update_presence():
         large_text=large_text,
         small_image="pw",
         small_text="Physics Wallah!",
-        buttons=[{"label": "Physics Wallah 💖", "url": "https://discord.gg/physicswallah"},{ "label": "PW Utils ⭐", "url": "https://github.com/FireHead90544/PWUtils"}]
+        buttons=[{"label": "Physics Wallah 💖", "url": "https://discord.gg/physicswallah"}, { "label": "PW Utils ⭐", "url": "https://github.com/FireHead90544/PWUtils"}]
     )
     print(f"{Fore.GREEN} >>> Updated Rich Presence :)")
     print(f"{Fore.CYAN} >>> Now just leave this window open (maybe just minimize it), you can update/close whenever you want by selecting the below options.")
