@@ -97,6 +97,10 @@ def update_presence():
     elif data[1] == "dpp":
         large_image="test"
         large_text = "Doing Dpp"
+    else:
+        large_image=data[1]
+        large_text = data[1].title()
+        
     RPC.update(
         state=data[2].title(),
         details=data[0].title(),
