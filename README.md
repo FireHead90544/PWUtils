@@ -1,5 +1,7 @@
 # PWUtils
 
+*ANNOUNCEMENT: So, I recently have been seeing some traffic activity on this repository and just wanted to let everybody know that I have stopped working on this repo since a long time, so most stuffs might not work as intended. I have no plans in fixing things as of now, but surely in future I'll be pushing updates to this repository. Until then if anyone else want to contribute to the repo, you may create an issue/pull request for the same.*
+
 Some of the utilities I made to facilitate me while using PhysicsWallah's website.
 <img src="https://user-images.githubusercontent.com/55452780/173436175-f99671ac-cc21-48b1-aa0a-eb54c2b57d2d.png" align="right" title="All the image rights goes to their respective owners PW, the logo's just been modified by me by adding a few more illustrations to it.">
 
