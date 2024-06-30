@@ -62,7 +62,7 @@ def rpcData():
             "type": "list",
             "name": "subject",
             "message": "Select the subject you are studying: ",
-            "choices": ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'Attempting Test']
+            "choices": ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'Attempting Test',"Doing DPP's"]
         },
         {
             "type": "input",
@@ -73,7 +73,13 @@ def rpcData():
         }
     ]
     data = prompt(dataIn, style=stylesheet)
-    return data['batch'], "test" if data['subject'].startswith("At") else data['subject'].lower(), data['topic']
+    
+    if data['subject'].startswith("Attempting"):
+        return data['batch'], "test", data['topic']
+    if data['subject'].startswith("Doing"):
+        return data['batch'], "dpp", data['topic']
+    else:
+        return data['batch'],data['subject'].lower(), data['topic']
 
 RPC = Presence(CLIENT_ID)
 RPC.connect()
@@ -84,12 +90,23 @@ def update_presence():
         RPC.clear()
     except Exception:
         RPC.connect() # This means that the connection already got disconnected, so attempt to start a new one
+
+    if data[1] == "test":
+        large_image="test"
+        large_text = "Attempting Test" 
+    elif data[1] == "dpp":
+        large_image="test"
+        large_text = "Doing Dpp"
+    else:
+        large_image=data[1]
+        large_text = data[1].title()
+        
     RPC.update(
         state=data[2].title(),
         details=data[0].title(),
         start=LOG_TIME,
-        large_image=data[1],
-        large_text="Attempting Test" if data[1] == "test" else data[1].title(),
+        large_image=large_image,
+        large_text=large_text,
         small_image="pw",
         small_text="Physics Wallah!",
         buttons=[{"label": "Physics Wallah 💖", "url": "https://discord.gg/physicswallah"}, { "label": "PW Utils ⭐", "url": "https://github.com/FireHead90544/PWUtils"}]
@@ -109,3 +126,4 @@ while True:
             pass
         print(f"{Fore.GREEN} >>> Closed Rich Presence :)")
         break
+
